@@ -18,6 +18,6 @@ const projectFiles = import.meta.glob<Project>('../content/projects/*.json', {
   import: 'default',
 })
 
-export const projects: Project[] = Object.values(projectFiles).sort(
-  (first, second) => first.order - second.order,
-)
+export const projects: Project[] = Object.values(projectFiles)
+  .map((project) => ({ ...project, additionalImages: project.additionalImages ?? [] }))
+  .sort((first, second) => first.order - second.order)
