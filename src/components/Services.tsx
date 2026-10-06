@@ -6,7 +6,7 @@ const services = [
 
 export function Services() {
   return (
-    <section className="services section-space" aria-labelledby="services-title">
+    <section className="services section-space" id="services" aria-labelledby="services-title">
       <div className="page-shell">
         <div className="section-heading services-heading"><div><span className="section-kicker">02 / PRACTICE</span><h2 id="services-title">What I Do<span className="heading-period">.</span></h2></div><p>From first thought to final form.</p></div>
         <div className="service-list">{services.map((service) => <div className="service-row" key={service.number}><span>{service.number}</span><h3>{service.title}</h3><p>{service.description}</p><span className="service-mark" aria-hidden="true">↗</span></div>)}</div>

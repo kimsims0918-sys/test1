@@ -13,7 +13,7 @@ export function Header() {
     setWorkOpen(false)
   }
 
-  function goTo(id: 'about' | 'contact') {
+  function goTo(id: 'about' | 'services' | 'contact') {
     closeMenus()
     if (location.pathname !== '/') {
       navigate(`/#${id}`)
@@ -36,6 +36,7 @@ export function Header() {
               {workCategories.map((item) => <Link key={item.slug} to={`/work/${item.slug}`} onClick={closeMenus}>{item.label}</Link>)}
             </div>
           </div>
+          <button type="button" onClick={() => goTo('services')}>SERVICES</button>
           <button type="button" onClick={() => goTo('contact')}>CONTACT</button>
         </nav>
         <button className="menu-toggle" type="button" aria-expanded={open} aria-controls="site-navigation" aria-label={open ? '메뉴 닫기' : '메뉴 열기'} onClick={() => { setOpen(!open); setWorkOpen(false) }}>
