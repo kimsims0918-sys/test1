@@ -10,9 +10,12 @@ public/
   _redirects              # Netlify 새로고침 라우팅
 src/
   components/             # Header, Hero, Portfolio, PortfolioCard, Services, About, Contact, Footer
+  content/
+    site.json             # 대표 이미지, 소개글, SNS/이메일
+    projects/             # 작품별 JSON 파일
   data/
-    projects.ts           # 작품 목록 및 상세 내용
-    site.ts               # 대표 이미지, 소개글, SNS/이메일 링크
+    projects.ts           # 작품 JSON을 읽고 정렬
+    site.ts               # 사이트 JSON을 읽고 이메일 링크 생성
   pages/
     Home.tsx
     ProjectDetail.tsx
@@ -22,17 +25,22 @@ src/
   main.tsx
   styles.css
 vercel.json               # Vercel 새로고침 라우팅
+.pages.yml                # Pages CMS 편집 화면 설정
 ```
 
 ## 콘텐츠 바꾸기
 
-- 작품 추가/삭제: `src/data/projects.ts`의 `projects` 배열을 수정합니다. `id`는 URL에 쓰이므로 작품마다 고유한 영문 소문자와 하이픈을 사용하세요. `cardImage`는 목록용 작은 이미지, `image`는 상세용 큰 이미지입니다. `additionalImages`에 상세 이미지를 추가할 수 있습니다.
-- 대표 이미지: 새 파일을 `public/images/`에 넣고 `src/data/site.ts`의 `heroImage`를 `/images/파일명`으로 바꿉니다.
-- 작가 사진/작업 이미지: 같은 폴더에 넣고 `src/data/site.ts`의 `aboutImage`를 바꿉니다.
-- 소개글: `src/data/site.ts`의 `about` 배열을 수정합니다.
-- SNS/이메일: `src/data/site.ts`의 `socialLinks`와 `contactEmail`을 수정합니다. 현재 값은 제공된 기존 사이트에 있던 Instagram 계정, Behance 작품 페이지, 이메일 주소입니다. Behance는 프로필 주소가 확인되지 않아 작품 페이지로 연결했습니다.
+- 작품 추가/삭제: `src/content/projects/`에서 작품별 JSON 파일을 수정합니다. `id`는 URL에 쓰이므로 작품마다 고유한 영문 소문자와 하이픈을 사용하세요. `order`의 작은 숫자가 먼저 표시됩니다. `cardImage`는 목록용 작은 이미지, `image`는 상세용 큰 이미지입니다.
+- 대표 이미지, 작가 소개 이미지, 소개글, SNS/이메일: `src/content/site.json`에서 수정합니다. 이메일 주소는 한 곳만 바꾸면 Footer의 Email 링크에도 반영됩니다. Behance는 프로필 주소가 확인되지 않아 작품 페이지로 연결했습니다.
+- 새 이미지는 `public/images/`에 넣고 `/images/파일명`으로 경로를 지정합니다.
 
 현재 작품 이미지와 제목은 제공된 기존 REVINCI Studio 사이트 압축파일을 바탕으로 넣었습니다. 해당 사이트에 연도가 없는 작업은 `—`로 표시했습니다. 추가 이미지는 자료에 별도 이미지가 확인되지 않아 비워 두었고, 나중에 쉽게 추가할 수 있습니다. `public/images/`에 새 파일을 넣고 데이터의 경로를 수정하면 교체됩니다.
+
+## 브라우저에서 콘텐츠 수정하기
+
+이 저장소는 [Pages CMS](https://pagescms.org/docs/quick-start/) 설정 파일 `.pages.yml`을 포함합니다. GitHub 저장소 소유자가 Pages CMS에 로그인하고 GitHub App을 **이 저장소에 한정해** 설치하면 작품 추가/삭제, 이미지 업로드, 소개글과 링크 수정을 입력 화면에서 할 수 있습니다. 저장하면 GitHub 파일이 변경되며, Vercel에 Git 연결이 되어 있다면 자동 배포됩니다. 외부 앱 연결은 아직 수행되지 않았습니다.
+
+Pages CMS는 콘텐츠 편집용입니다. 레이아웃과 스타일을 바꾸려면 React 컴포넌트와 `src/styles.css`를 수정해야 합니다.
 
 ## 로컬 실행
 

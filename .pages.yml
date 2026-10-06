@@ -1,0 +1,102 @@
+media:
+  input: public/images
+  output: /images
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: site
+    label: 사이트 정보
+    type: file
+    path: src/content/site.json
+    format: json
+    fields:
+      - name: name
+        label: 작가명
+        type: string
+        required: true
+      - name: discipline
+        label: 작업 분야
+        type: string
+        required: true
+      - name: heroLine
+        label: 첫 화면 소개 문장
+        type: text
+        required: true
+      - name: heroImage
+        label: 첫 화면 대표 이미지
+        type: image
+        required: true
+      - name: aboutImage
+        label: 소개 영역 이미지
+        type: image
+      - name: about
+        label: 소개글 문단
+        type: text
+        list: true
+      - name: contactEmail
+        label: 문의 이메일
+        type: string
+        required: true
+      - name: socialLinks
+        label: SNS 링크
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: 표시 이름
+            type: string
+            required: true
+          - name: url
+            label: 주소
+            type: string
+            required: true
+
+  - name: projects
+    label: 작품 목록
+    type: collection
+    path: src/content/projects
+    format: json
+    filename: '{id}.json'
+    view:
+      primary: title
+    fields:
+      - name: id
+        label: URL 이름 (영문 소문자와 -)
+        type: string
+        required: true
+        pattern: '^[a-z0-9-]+$'
+      - name: order
+        label: 표시 순서 (작은 숫자가 먼저)
+        type: number
+        required: true
+      - name: title
+        label: 작품 제목
+        type: string
+        required: true
+      - name: category
+        label: 카테고리
+        type: select
+        required: true
+        options:
+          values: ['ILLUSTRATION', 'BRAND', 'VECTOR & ASSET']
+      - name: year
+        label: 제작 연도 (모르면 —)
+        type: string
+        required: true
+      - name: description
+        label: 작품 설명
+        type: text
+        required: true
+      - name: image
+        label: 상세 이미지
+        type: image
+        required: true
+      - name: cardImage
+        label: 목록용 이미지 (선택)
+        type: image
+      - name: additionalImages
+        label: 추가 이미지 (선택)
+        type: image
+        options:
+          multiple:
+            max: 20
