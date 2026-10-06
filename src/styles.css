@@ -15,3 +15,4 @@
 @media(min-width:761px) and (max-width:900px){.hero{min-height:680px}.hero-art{min-height:540px}.hero h1{font-size:clamp(65px,9vw,95px)}.hero-bottom{display:block}.hero-link{margin-top:32px}.about{gap:5%}.about-copy h2{font-size:40px}.about-text p{font-size:13px}.contact-heading{grid-template-columns:1fr}.contact-heading p{margin-top:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.project-image img{transition:none}}
 .form-grid .field-label{color:#f6f5f1}.form-grid .field-label em{color:#b5b9a6;font-style:normal}
+.hero-art{background:#f1efeb}.hero-art img,.project-image img,.about-image img{object-fit:contain}.project-image,.about-image{background:#f4f3ef}.detail-main-image{height:auto;max-height:85svh;aspect-ratio:auto;object-fit:contain;background:#f4f3ef}

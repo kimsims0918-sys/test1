@@ -6,7 +6,7 @@ React + TypeScript + Vite로 만든 독립형 일러스트레이터 포트폴리
 
 ```text
 public/
-  images/                 # 교체 가능한 SVG 플레이스홀더와 실제 작품 이미지
+  images/                 # 실제 작품·브랜드 이미지
   _redirects              # Netlify 새로고침 라우팅
 src/
   components/             # Header, Hero, Portfolio, PortfolioCard, Services, About, Contact, Footer
@@ -26,13 +26,13 @@ vercel.json               # Vercel 새로고침 라우팅
 
 ## 콘텐츠 바꾸기
 
-- 작품 추가/삭제: `src/data/projects.ts`의 `projects` 배열을 수정합니다. `id`는 URL에 쓰이므로 작품마다 고유한 영문 소문자와 하이픈을 사용하세요. `additionalImages`에 상세 이미지 경로를 추가할 수 있습니다.
+- 작품 추가/삭제: `src/data/projects.ts`의 `projects` 배열을 수정합니다. `id`는 URL에 쓰이므로 작품마다 고유한 영문 소문자와 하이픈을 사용하세요. `cardImage`는 목록용 작은 이미지, `image`는 상세용 큰 이미지입니다. `additionalImages`에 상세 이미지를 추가할 수 있습니다.
 - 대표 이미지: 새 파일을 `public/images/`에 넣고 `src/data/site.ts`의 `heroImage`를 `/images/파일명`으로 바꿉니다.
 - 작가 사진/작업 이미지: 같은 폴더에 넣고 `src/data/site.ts`의 `aboutImage`를 바꿉니다.
 - 소개글: `src/data/site.ts`의 `about` 배열을 수정합니다.
-- SNS/이메일: `src/data/site.ts`의 `socialLinks`와 `contactEmail`을 수정합니다. 현재 Instagram, Behance는 각 플랫폼의 첫 화면을 가리키는 임시 링크이며, 이메일 주소도 예시입니다. 공개 전에 실제 계정과 주소로 바꾸세요.
+- SNS/이메일: `src/data/site.ts`의 `socialLinks`와 `contactEmail`을 수정합니다. 현재 값은 제공된 기존 사이트에 있던 Instagram 계정, Behance 작품 페이지, 이메일 주소입니다. Behance는 프로필 주소가 확인되지 않아 작품 페이지로 연결했습니다.
 
-현재 작품 제목과 이미지도 레이아웃 검증용 예시입니다. `public/images/`의 SVG를 같은 이름의 실제 이미지로 교체하거나 `projects.ts`의 `image` 경로를 수정하면 됩니다.
+현재 작품 이미지와 제목은 제공된 기존 REVINCI Studio 사이트 압축파일을 바탕으로 넣었습니다. 해당 사이트에 연도가 없는 작업은 `—`로 표시했습니다. 추가 이미지는 자료에 별도 이미지가 확인되지 않아 비워 두었고, 나중에 쉽게 추가할 수 있습니다. `public/images/`에 새 파일을 넣고 데이터의 경로를 수정하면 교체됩니다.
 
 ## 로컬 실행
 

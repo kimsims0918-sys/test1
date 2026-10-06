@@ -15,8 +15,8 @@ export function Hero() {
         </div>
       </div>
       <div className="hero-art">
-        <img src={site.heroImage} alt="REVINCI 포트폴리오 대표 그래픽" />
-        <span className="image-caption">SELECTED VISUALS / 2023—2025</span>
+        <img src={site.heroImage} alt="REVINCI 작품 화병도" />
+        <span className="image-caption">SELECTED VISUAL / 화병도</span>
       </div>
     </section>
   )
