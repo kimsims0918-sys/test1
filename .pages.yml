@@ -18,12 +18,15 @@ content:
         label: 작업 분야
         type: string
         required: true
-      - name: heroLine
-        label: 첫 화면 소개 문장
-        type: text
-        required: true
       - name: heroImage
-        label: 첫 화면 대표 이미지
+        label: 첫 화면 흑백 이미지
+        type: image
+        required: true
+      - name: heroColorImage
+        label: 첫 화면 컬러 이미지 (마우스 효과)
+        type: image
+      - name: headerLogo
+        label: 상단 로고 이미지
         type: image
         required: true
       - name: aboutImage

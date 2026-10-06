@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { workCategories } from '../data/workCategories'
+import { site } from '../data/site'
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -24,7 +25,7 @@ export function Header() {
     <header className={location.pathname === '/' ? 'site-header site-header--dark' : 'site-header'}>
       <div className="header-inner page-shell">
         <Link className="header-home" to="/" onClick={() => { closeMenus(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>HOME</Link>
-        <Link className="wordmark" to="/" onClick={() => { closeMenus(); window.scrollTo({ top: 0, behavior: 'smooth' }) }} aria-label="REVINCI 홈">REVINCI<span className="wordmark-dot">.</span></Link>
+        <Link className="wordmark" to="/" onClick={() => { closeMenus(); window.scrollTo({ top: 0, behavior: 'smooth' }) }} aria-label="REVINCI 홈"><img className="wordmark-logo" src={site.headerLogo} alt="" /></Link>
         <nav className={open ? 'site-nav is-open' : 'site-nav'} id="site-navigation" aria-label="주 메뉴">
           <button type="button" onClick={() => goTo('about')}>ABOUT</button>
           <div className={workOpen ? 'nav-work is-open' : 'nav-work'} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setWorkOpen(false) }}>
