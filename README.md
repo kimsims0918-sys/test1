@@ -17,8 +17,12 @@ src/
     projects.ts           # 작품 JSON을 읽고 정렬
     site.ts               # 사이트 JSON을 읽고 이메일 링크 생성
   pages/
-    Home.tsx
+    Home.tsx              # 대표 첫 화면만 표시
+    WorkPage.tsx          # 전체 작품
     WorkCategory.tsx      # WORK의 세 분류별 독립 페이지
+    AboutPage.tsx
+    ServicesPage.tsx
+    ContactPage.tsx
     ProjectDetail.tsx
   services/
     inquiry.ts            # 향후 이메일/API 전송 연결 지점
@@ -34,6 +38,7 @@ vercel.json               # Vercel 새로고침 라우팅
 
 - 작품 추가/삭제: `src/content/projects/`에서 작품별 JSON 파일을 수정합니다. `id`는 URL에 쓰이므로 작품마다 고유한 영문 소문자와 하이픈을 사용하세요. `order`의 작은 숫자가 먼저 표시됩니다. `cardImage`는 목록용 작은 이미지, `image`는 상세용 큰 이미지입니다.
 - WORK 메뉴의 Illustration, Vector & Assets, Brand Projects는 각각 `/work/illustration`, `/work/vector-assets`, `/work/brand-projects`에 열립니다. 작품의 기본 분류는 JSON의 `category`로, 두 분류에 모두 노출할 때는 선택 항목 `alsoIn`으로 지정합니다. 로고·패키지 디자인은 Brand Projects를 기본 분류로 사용합니다.
+- 홈(`/`)에는 대표 첫 화면만 표시합니다. 전체 작품은 `/work`, 소개는 `/about`, 작업 분야는 `/services`, 문의는 `/contact`에서 열립니다. 기존 `/#work` 등의 링크도 새 페이지로 이동합니다.
 - 대표 이미지, 작가 소개 이미지, 소개글, SNS/이메일: `src/content/site.json`에서 수정합니다. 이메일 주소는 한 곳만 바꾸면 Footer의 Email 링크에도 반영됩니다. Behance는 프로필 주소가 확인되지 않아 작품 페이지로 연결했습니다.
 - 새 이미지는 `public/images/`에 넣고 `/images/파일명`으로 경로를 지정합니다.
 

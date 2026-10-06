@@ -31,7 +31,7 @@ export function Hero() {
 
         <div className="hero-artwork" aria-label="대표 작품 미리보기">
           <div className="hero-artwork-glow" style={{ backgroundImage: `url(${site.heroImage})` }} aria-hidden="true" />
-          <Link className="hero-tile hero-tile-primary" to={heroProject ? `/project/${heroProject.id}` : '/#work'} aria-label={heroProject ? `${heroProject.title} 작품 보기` : '작품 목록 보기'}>
+          <Link className="hero-tile hero-tile-primary" to={heroProject ? `/project/${heroProject.id}` : '/work'} aria-label={heroProject ? `${heroProject.title} 작품 보기` : '작품 목록 보기'}>
             <img src={site.heroImage} alt="REVINCI 대표 작품" />
             <span>SELECTED WORK <span aria-hidden="true">↗</span></span>
           </Link>
@@ -49,7 +49,7 @@ export function Hero() {
 
         <div className="hero-stage-bottom">
           <p>{site.heroLine}</p>
-          <a href="#work">VIEW WORK <span aria-hidden="true">↓</span></a>
+          <Link to="/work">VIEW WORK <span aria-hidden="true">↓</span></Link>
           <span className="hero-stage-hint">MOVE TO EXPLORE / SCROLL TO DISCOVER</span>
         </div>
       </div>

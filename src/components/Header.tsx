@@ -13,14 +13,11 @@ export function Header() {
     setWorkOpen(false)
   }
 
-  function goTo(id: 'about' | 'services' | 'contact') {
+  function goTo(page: 'about' | 'services' | 'contact') {
     closeMenus()
-    if (location.pathname !== '/') {
-      navigate(`/#${id}`)
-      return
-    }
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-    window.history.replaceState(null, '', `/#${id}`)
+    const path = `/${page}`
+    if (location.pathname === path) window.scrollTo({ top: 0, behavior: 'smooth' })
+    else navigate(path)
   }
 
   return (

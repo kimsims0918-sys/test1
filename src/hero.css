@@ -54,6 +54,7 @@
 .portfolio-empty{min-height:250px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;border-top:1px solid #c9cac3;text-align:center}
 .portfolio-empty p{color:#777a72;font-size:16px}
 .portfolio-empty a,.portfolio-empty button{border:0;border-bottom:1px solid currentColor;background:none;padding:0 0 7px;font-size:11px;font-weight:700;letter-spacing:.1em}
+.standalone-page{min-height:calc(100svh - 76px)}
 
 @media(max-width:1100px){
   .hero-stage h1{font-size:clamp(60px,8.6vw,110px)}
@@ -78,6 +79,7 @@
   .work-page-heading h1{font-size:clamp(50px,10vw,72px)}
   .work-page-heading p{margin-top:25px;font-size:12px}
   .work-page .filter-row{gap:18px}
+  .standalone-page{min-height:calc(100svh - 64px)}
   .hero-stage-inner{min-height:calc(100svh - 64px);padding-top:26px;padding-bottom:25px}
   .hero-stage-kicker{max-width:230px;font-size:8px;line-height:1.6;letter-spacing:.12em}
   .hero-stage-copy{margin-bottom:96px}

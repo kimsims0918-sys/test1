@@ -1,16 +1,14 @@
 import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { Hero } from '../components/Hero'
-import { Portfolio } from '../components/Portfolio'
-import { Services } from '../components/Services'
-import { About } from '../components/About'
-import { Contact } from '../components/Contact'
 
 export function Home() {
   const location = useLocation()
+  const navigate = useNavigate()
   useEffect(() => {
-    if (location.hash) requestAnimationFrame(() => document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: 'smooth' }))
+    const oldSection = location.hash.slice(1)
+    if (['work', 'about', 'services', 'contact'].includes(oldSection)) navigate(`/${oldSection}`, { replace: true })
     else window.scrollTo({ top: 0, behavior: 'instant' })
-  }, [location.pathname, location.hash])
-  return <main><Hero /><Portfolio /><Services /><About /><Contact /></main>
+  }, [location.hash, navigate])
+  return <main><Hero /></main>
 }

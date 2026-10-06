@@ -26,7 +26,7 @@ export function Contact() {
     <section className="contact section-space" id="contact" aria-labelledby="contact-title">
       <div className="page-shell">
         <span className="section-kicker">04 / CONTACT</span>
-        <div className="contact-heading"><h2 id="contact-title">LET'S WORK<br />TOGETHER<span className="heading-period">.</span></h2><p>새로운 프로젝트와 협업을 기다리고 있습니다.<br />일러스트레이션, 브랜드 비주얼, 패키지 및 그래픽 에셋 제작에 대한 문의를 보내주세요.</p></div>
+        <div className="contact-heading"><h1 id="contact-title">LET'S WORK<br />TOGETHER<span className="heading-period">.</span></h1><p>새로운 프로젝트와 협업을 기다리고 있습니다.<br />일러스트레이션, 브랜드 비주얼, 패키지 및 그래픽 에셋 제작에 대한 문의를 보내주세요.</p></div>
         {submitted ? <div className="contact-success" role="status"><span>↗</span><h3>Thank you. Your inquiry has been received.</h3><p>이 화면은 MVP용 접수 확인입니다. 현재 입력 내용은 전송되거나 저장되지 않습니다.</p><button type="button" className="text-link" onClick={() => setSubmitted(false)}>SEND ANOTHER INQUIRY <span aria-hidden="true">↗</span></button></div> :
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-grid">
