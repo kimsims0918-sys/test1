@@ -18,12 +18,14 @@ src/
     site.ts               # 사이트 JSON을 읽고 이메일 링크 생성
   pages/
     Home.tsx
+    WorkCategory.tsx      # WORK의 세 분류별 독립 페이지
     ProjectDetail.tsx
   services/
     inquiry.ts            # 향후 이메일/API 전송 연결 지점
   App.tsx
   main.tsx
   styles.css
+  hero.css                 # 검은 첫 화면과 헤더/작품 분류 화면 스타일
 vercel.json               # Vercel 새로고침 라우팅
 .pages.yml                # Pages CMS 편집 화면 설정
 ```
@@ -31,6 +33,7 @@ vercel.json               # Vercel 새로고침 라우팅
 ## 콘텐츠 바꾸기
 
 - 작품 추가/삭제: `src/content/projects/`에서 작품별 JSON 파일을 수정합니다. `id`는 URL에 쓰이므로 작품마다 고유한 영문 소문자와 하이픈을 사용하세요. `order`의 작은 숫자가 먼저 표시됩니다. `cardImage`는 목록용 작은 이미지, `image`는 상세용 큰 이미지입니다.
+- WORK 메뉴의 Illustration, Vector & Assets, Brand Projects는 각각 `/work/illustration`, `/work/vector-assets`, `/work/brand-projects`에 열립니다. 작품의 기본 분류는 JSON의 `category`로, 두 분류에 모두 노출할 때는 선택 항목 `alsoIn`으로 지정합니다. 로고·패키지 디자인은 Brand Projects를 기본 분류로 사용합니다.
 - 대표 이미지, 작가 소개 이미지, 소개글, SNS/이메일: `src/content/site.json`에서 수정합니다. 이메일 주소는 한 곳만 바꾸면 Footer의 Email 링크에도 반영됩니다. Behance는 프로필 주소가 확인되지 않아 작품 페이지로 연결했습니다.
 - 새 이미지는 `public/images/`에 넣고 `/images/파일명`으로 경로를 지정합니다.
 
@@ -40,7 +43,7 @@ vercel.json               # Vercel 새로고침 라우팅
 
 이 저장소는 [Pages CMS](https://pagescms.org/docs/quick-start/) 설정 파일 `.pages.yml`을 포함합니다. GitHub 저장소 소유자가 Pages CMS에 로그인하고 GitHub App을 **이 저장소에 한정해** 설치하면 작품 추가/삭제, 이미지 업로드, 소개글과 링크 수정을 입력 화면에서 할 수 있습니다. 저장하면 GitHub 파일이 변경되며, Vercel에 Git 연결이 되어 있다면 자동 배포됩니다. 외부 앱 연결은 아직 수행되지 않았습니다.
 
-Pages CMS는 콘텐츠 편집용입니다. 레이아웃과 스타일을 바꾸려면 React 컴포넌트와 `src/styles.css`를 수정해야 합니다.
+Pages CMS는 콘텐츠 편집용입니다. 레이아웃과 스타일을 바꾸려면 React 컴포넌트와 `src/styles.css`, `src/hero.css`를 수정해야 합니다.
 
 ## 로컬 실행
 

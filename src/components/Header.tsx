@@ -1,19 +1,20 @@
 import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-
-const navigation = [
-  { label: 'WORK', id: 'work' },
-  { label: 'ABOUT', id: 'about' },
-  { label: 'CONTACT', id: 'contact' },
-]
+import { workCategories } from '../data/workCategories'
 
 export function Header() {
   const [open, setOpen] = useState(false)
+  const [workOpen, setWorkOpen] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
 
-  function goTo(id: string) {
+  function closeMenus() {
     setOpen(false)
+    setWorkOpen(false)
+  }
+
+  function goTo(id: 'about' | 'contact') {
+    closeMenus()
     if (location.pathname !== '/') {
       navigate(`/#${id}`)
       return
@@ -23,13 +24,21 @@ export function Header() {
   }
 
   return (
-    <header className="site-header">
+    <header className={location.pathname === '/' ? 'site-header site-header--dark' : 'site-header'}>
       <div className="header-inner page-shell">
-        <Link className="wordmark" to="/" onClick={() => { setOpen(false); window.scrollTo({ top: 0, behavior: 'instant' }) }} aria-label="REVINCI 홈">REVINCI<span className="wordmark-dot">.</span></Link>
+        <Link className="header-home" to="/" onClick={() => { closeMenus(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>HOME</Link>
+        <Link className="wordmark" to="/" onClick={() => { closeMenus(); window.scrollTo({ top: 0, behavior: 'smooth' }) }} aria-label="REVINCI 홈">REVINCI<span className="wordmark-dot">.</span></Link>
         <nav className={open ? 'site-nav is-open' : 'site-nav'} id="site-navigation" aria-label="주 메뉴">
-          {navigation.map((item) => <button key={item.id} type="button" onClick={() => goTo(item.id)}>{item.label}</button>)}
+          <button type="button" onClick={() => goTo('about')}>ABOUT</button>
+          <div className={workOpen ? 'nav-work is-open' : 'nav-work'} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setWorkOpen(false) }}>
+            <button type="button" aria-expanded={workOpen} aria-controls="work-submenu" onClick={() => setWorkOpen(!workOpen)}>WORK <span aria-hidden="true">⌄</span></button>
+            <div className="work-submenu" id="work-submenu">
+              {workCategories.map((item) => <Link key={item.slug} to={`/work/${item.slug}`} onClick={closeMenus}>{item.label}</Link>)}
+            </div>
+          </div>
+          <button type="button" onClick={() => goTo('contact')}>CONTACT</button>
         </nav>
-        <button className="menu-toggle" type="button" aria-expanded={open} aria-controls="site-navigation" aria-label={open ? '메뉴 닫기' : '메뉴 열기'} onClick={() => setOpen(!open)}>
+        <button className="menu-toggle" type="button" aria-expanded={open} aria-controls="site-navigation" aria-label={open ? '메뉴 닫기' : '메뉴 열기'} onClick={() => { setOpen(!open); setWorkOpen(false) }}>
           <span /> <span />
         </button>
       </div>

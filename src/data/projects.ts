@@ -1,9 +1,10 @@
-export type Category = 'ILLUSTRATION' | 'BRAND' | 'VECTOR & ASSET'
+export type Category = 'ILLUSTRATION' | 'VECTOR & ASSETS' | 'BRAND PROJECTS'
 
 export interface Project {
   id: string
   title: string
   category: Category
+  alsoIn?: Category
   image: string
   cardImage?: string
   year: string

@@ -78,7 +78,12 @@ content:
         type: select
         required: true
         options:
-          values: ['ILLUSTRATION', 'BRAND', 'VECTOR & ASSET']
+          values: ['ILLUSTRATION', 'VECTOR & ASSETS', 'BRAND PROJECTS']
+      - name: alsoIn
+        label: 추가 노출 카테고리 (선택)
+        type: select
+        options:
+          values: ['ILLUSTRATION', 'VECTOR & ASSETS', 'BRAND PROJECTS']
       - name: year
         label: 제작 연도 (모르면 —)
         type: string
