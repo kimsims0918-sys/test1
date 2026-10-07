@@ -23,6 +23,7 @@ export async function submitInquiry(inquiry: Inquiry): Promise<void> {
   })
   const result = await response.json()
   if (!response.ok || (result.success !== true && result.success !== 'true')) {
+    if (typeof result.message === 'string' && /activation/i.test(result.message)) throw new Error('문의 폼이 활성화 대기 중입니다. 이메일로 직접 문의해주세요.')
     throw new Error('문의 전송에 실패했습니다. 잠시 후 다시 시도하거나 이메일로 직접 문의해주세요.')
   }
 }

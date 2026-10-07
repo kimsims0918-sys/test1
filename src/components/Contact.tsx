@@ -22,7 +22,7 @@ export function Contact() {
       await submitInquiry(values)
       setSubmitted(true)
       setValues(initial)
-    } catch { setError('문의 전송에 실패했습니다. 입력 내용을 확인하고 다시 시도하거나 이메일로 직접 문의해주세요.') } finally { setBusy(false) }
+    } catch (cause) { setError(cause instanceof Error && cause.message.includes('활성화') ? cause.message : '문의 전송에 실패했습니다. 입력 내용을 확인하고 다시 시도하거나 이메일로 직접 문의해주세요.') } finally { setBusy(false) }
   }
 
   return (
