@@ -36,7 +36,7 @@
 .filter-row a.filter{display:inline-block}
 .work-page{min-height:70svh;padding-top:95px;padding-bottom:130px}
 .work-page-heading{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:58px}
-.work-page-heading h1{margin:18px 0 0;font:700 clamp(54px,7vw,112px)/1 Manrope,sans-serif;letter-spacing:-.08em}
+.work-page-heading h1{margin:0;font:400 clamp(48px,5vw,68px)/1.05 'DM Sans',Arial,sans-serif;letter-spacing:-.055em;text-transform:uppercase}
 .work-page-heading p{max-width:300px;margin:0 0 6px;color:#777a72;font-size:14px;line-height:1.6}
 .work-page .filter-row{gap:35px}
 .work-page-back{display:inline-block;margin-top:90px;border-bottom:1px solid currentColor;padding-bottom:7px;font-size:11px;font-weight:700;letter-spacing:.1em}
@@ -61,7 +61,7 @@
   .site-header--dark .site-nav button{border-color:#3a3a3a}
   .work-page{padding-top:65px;padding-bottom:90px}
   .work-page-heading{display:block;margin-bottom:40px}
-  .work-page-heading h1{font-size:clamp(50px,10vw,72px)}
+  .work-page-heading h1{font-size:clamp(36px,9vw,58px)}
   .work-page-heading p{margin-top:25px;font-size:12px}
   .work-page .filter-row{gap:18px}
   .standalone-page{min-height:calc(100svh - 64px)}

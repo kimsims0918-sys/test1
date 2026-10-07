@@ -16,7 +16,7 @@ export function WorkCategory() {
   return (
     <main className="work-page page-shell">
       <div className="work-page-heading">
-        <div><span className="section-kicker">WORK / {String(workCategories.indexOf(current) + 1).padStart(2, '0')}</span><h1>{current.label}<span className="heading-period">.</span></h1></div>
+        <div><h1>{current.label}</h1></div>
         <p>{current.description}</p>
       </div>
       <nav className="filter-row" aria-label="작품 분류">

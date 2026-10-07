@@ -15,6 +15,7 @@ export function About() {
             {site.about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
         </div>
+        <img className="about-signature" src={site.aboutSignature} alt="르빈치 스튜디오 사인" />
       </div>
     </section>
   )
