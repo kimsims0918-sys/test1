@@ -31,7 +31,7 @@ export function Hero() {
       <div className="hero-stage-inner page-shell">
         <div className="hero-stage-copy">
           <h1 id="hero-title"><img className="hero-stage-logo" src={site.headerLogo} alt="Revinci Studio" /></h1>
-          <span className="hero-stage-overline">ILLUSTRATION & VISUAL DESIGN</span>
+          <span className="hero-stage-overline">{site.discipline}</span>
         </div>
         <div className="hero-stage-bottom" aria-hidden="true" />
       </div>
