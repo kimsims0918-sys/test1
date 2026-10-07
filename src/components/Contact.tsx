@@ -8,6 +8,7 @@ const initial: Inquiry = { name: '', company: '', email: '', projectType: '', bu
 export function Contact() {
   const [values, setValues] = useState<Inquiry>(initial)
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState('')
   const [busy, setBusy] = useState(false)
 
   function update(field: keyof Inquiry, value: string) { setValues((current) => ({ ...current, [field]: value })) }
@@ -15,12 +16,13 @@ export function Contact() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     if (!event.currentTarget.reportValidity()) return
+    setError('')
     setBusy(true)
     try {
       await submitInquiry(values)
       setSubmitted(true)
       setValues(initial)
-    } finally { setBusy(false) }
+    } catch { setError('문의 전송에 실패했습니다. 입력 내용을 확인하고 다시 시도하거나 이메일로 직접 문의해주세요.') } finally { setBusy(false) }
   }
 
   return (
@@ -34,7 +36,7 @@ export function Contact() {
             <div className="contact-editorial-email"><span>Email</span><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></div>
           </div>
           <div className="contact-editorial-form">
-        {submitted ? <div className="contact-success" role="status"><span>↗</span><h3>Thank you. Your inquiry has been received.</h3><p>이 화면은 MVP용 접수 확인입니다. 현재 입력 내용은 전송되거나 저장되지 않습니다.</p><button type="button" className="text-link" onClick={() => setSubmitted(false)}>SEND ANOTHER INQUIRY <span aria-hidden="true">↗</span></button></div> :
+        {submitted ? <div className="contact-success" role="status"><span>↗</span><h3>Thank you. Your inquiry has been received.</h3><p>문의가 접수되었습니다. 내용을 확인한 후 남겨주신 이메일로 답변드리겠습니다.</p><button type="button" className="text-link" onClick={() => setSubmitted(false)}>SEND ANOTHER INQUIRY <span aria-hidden="true">↗</span></button></div> :
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-grid">
               <label><span className="field-label">Name <em>*</em></span><input name="name" autoComplete="name" required value={values.name} onChange={(e) => update('name', e.target.value)} placeholder="Your name" /></label>
@@ -45,7 +47,7 @@ export function Contact() {
               <label>Schedule<input name="schedule" value={values.schedule} onChange={(e) => update('schedule', e.target.value)} placeholder="Expected timeline" /></label>
               <label className="field-wide"><span className="field-label">Project Details <em>*</em></span><textarea name="details" required minLength={10} rows={4} value={values.details} onChange={(e) => update('details', e.target.value)} placeholder="Tell me about your project, goals, and deliverables." /></label>
             </div>
-            <div className="form-bottom"><p><span>*</span> Required fields<br />MVP 단계에서는 문의 내용이 서버로 전송되지 않습니다.</p><button className="submit-button" disabled={busy} type="submit">{busy ? 'SENDING...' : 'SEND INQUIRY'} <span aria-hidden="true">↗</span></button></div>
+            <p className="contact-form-error" role="alert">{error}</p><div className="form-bottom"><p><span>*</span> Required fields<br />문의 내용은 FormSubmit을 통해 이메일로 전달됩니다.</p><button className="submit-button" disabled={busy} type="submit">{busy ? 'SENDING...' : 'SEND INQUIRY'} <span aria-hidden="true">↗</span></button></div>
           </form>}
           </div>
         </div>
