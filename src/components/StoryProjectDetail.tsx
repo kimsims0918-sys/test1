@@ -4,6 +4,7 @@ import { workCategories } from '../data/workCategories'
 import '../storyProject.css'
 
 export function StoryProjectDetail({ project }: { project: Project }) {
+  const intro = project.storyIntro ?? project.description
   const category = workCategories.find((item) => item.category === project.category)
   const backTo = category ? `/work/${category.slug}` : '/work'
 
@@ -12,7 +13,7 @@ export function StoryProjectDetail({ project }: { project: Project }) {
       <section className="story-detail-intro" aria-labelledby="story-title">
         <h1 id="story-title">{project.storyTitle ?? project.title}</h1>
         {project.storySubtitle && <div className="story-detail-subtitle" lang="en">{project.storySubtitle}</div>}
-        {project.storyIntro && <p lang="ko">{project.storyIntro}</p>}
+        {intro && <p lang="ko">{intro}</p>}
         {project.storyIntroEnglish && <p className="story-detail-intro-english" lang="en">{project.storyIntroEnglish}</p>}
       </section>
 
