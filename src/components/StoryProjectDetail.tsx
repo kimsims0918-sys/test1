@@ -12,7 +12,7 @@ export function StoryProjectDetail({ project }: { project: Project }) {
       <section className="story-detail-intro" aria-labelledby="story-title">
         <h1 id="story-title">{project.storyTitle ?? project.title}</h1>
         {project.storySubtitle && <div className="story-detail-subtitle" lang="en">{project.storySubtitle}</div>}
-        <p lang="ko">{project.storyIntro}</p>
+        {project.storyIntro && <p lang="ko">{project.storyIntro}</p>}
         {project.storyIntroEnglish && <p className="story-detail-intro-english" lang="en">{project.storyIntroEnglish}</p>}
       </section>
 
