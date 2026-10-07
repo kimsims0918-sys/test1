@@ -23,7 +23,7 @@
 .hero-stage{position:relative;overflow:hidden;background:#080808;color:#f8f7f3}
 .hero-feature-art{position:absolute;z-index:0;inset:0;overflow:hidden;background:#080808}
 .hero-feature-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 46%;transform:scale(1.12);filter:blur(2px) brightness(.7)}
-.hero-feature-art .hero-feature-color{z-index:2;opacity:0;filter:blur(1.5px) brightness(.83) saturate(1.08);mask-image:radial-gradient(circle 28vw at var(--reveal-x,50%) var(--reveal-y,50%),#000 25%,rgba(0,0,0,.9) 58%,transparent 100%);-webkit-mask-image:radial-gradient(circle 28vw at var(--reveal-x,50%) var(--reveal-y,50%),#000 25%,rgba(0,0,0,.9) 58%,transparent 100%);transition:opacity .35s ease}
+.hero-feature-art .hero-feature-color{z-index:2;opacity:0;filter:none;mask-image:radial-gradient(circle 28vw at var(--reveal-x,50%) var(--reveal-y,50%),#000 25%,rgba(0,0,0,.9) 58%,transparent 100%);-webkit-mask-image:radial-gradient(circle 28vw at var(--reveal-x,50%) var(--reveal-y,50%),#000 25%,rgba(0,0,0,.9) 58%,transparent 100%);transition:opacity .35s ease}
 .hero-feature-art.is-revealed .hero-feature-color{opacity:1}
 .hero-feature-art::after{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.36),rgba(0,0,0,.43) 42%,rgba(0,0,0,.78) 100%)}
 .hero-stage-inner{position:relative;z-index:1;display:flex;flex-direction:column;min-height:calc(100svh - 76px);padding-top:34px;padding-bottom:30px}
@@ -65,7 +65,7 @@
   .standalone-page{min-height:calc(100svh - 64px)}
   .hero-stage-inner{min-height:calc(100svh - 64px);padding-top:26px;padding-bottom:25px}
   .hero-feature-art img{object-position:center;transform:scale(1.2);filter:blur(2px) brightness(.7)}
-  .hero-feature-color{mask-image:radial-gradient(circle 42vw at var(--reveal-x,50%) var(--reveal-y,50%),#000 25%,rgba(0,0,0,.9) 58%,transparent 100%);-webkit-mask-image:radial-gradient(circle 42vw at var(--reveal-x,50%) var(--reveal-y,50%),#000 25%,rgba(0,0,0,.9) 58%,transparent 100%)}
+  .hero-feature-art .hero-feature-color{mask-image:radial-gradient(circle 42vw at var(--reveal-x,50%) var(--reveal-y,50%),#000 25%,rgba(0,0,0,.9) 58%,transparent 100%);-webkit-mask-image:radial-gradient(circle 42vw at var(--reveal-x,50%) var(--reveal-y,50%),#000 25%,rgba(0,0,0,.9) 58%,transparent 100%)}
   .hero-feature-art::after{background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.48) 42%,rgba(0,0,0,.83) 100%)}
   .hero-stage-copy{margin-bottom:28px}
   .hero-stage-overline{margin-top:-7%;font-size:9px}
