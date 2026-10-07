@@ -6,10 +6,9 @@
 .header-home{grid-column:1;grid-row:1;justify-self:start;padding:12px 0;font:700 11px/1 'DM Sans',sans-serif;letter-spacing:.14em}
 .header-home:hover{color:#81876a}
 .nav-work{position:relative}
-.nav-work>button span{margin-left:4px;font-size:14px}
 .work-submenu{position:absolute;top:100%;left:-20px;display:none;min-width:190px;padding:10px 0;background:#f6f5f1;border:1px solid #d8d8d2;box-shadow:0 20px 35px rgba(0,0,0,.12)}
 .nav-work.is-open .work-submenu{display:block}
-@media(hover:hover){.nav-work:hover .work-submenu{display:block}}
+@media(hover:hover) and (min-width:761px){.nav-work:hover .work-submenu{display:block}}
 .work-submenu a{display:block;padding:12px 20px;font-size:11px;font-weight:700;letter-spacing:.04em;white-space:nowrap}
 .work-submenu a:hover,.work-submenu a:focus-visible{background:#e9e9e2}
 .site-header--dark{background:#080808;color:#f8f7f3;border-color:#242424;backdrop-filter:none}

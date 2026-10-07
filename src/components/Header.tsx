@@ -28,8 +28,8 @@ export function Header() {
         <Link className="wordmark" to="/" onClick={() => { closeMenus(); window.scrollTo({ top: 0, behavior: 'smooth' }) }} aria-label="REVINCI 홈"><img className="wordmark-logo" src={site.headerLogo} alt="" /></Link>
         <nav className={open ? 'site-nav is-open' : 'site-nav'} id="site-navigation" aria-label="주 메뉴">
           <button type="button" onClick={() => goTo('about')}>ABOUT</button>
-          <div className={workOpen ? 'nav-work is-open' : 'nav-work'} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setWorkOpen(false) }}>
-            <button type="button" aria-expanded={workOpen} aria-controls="work-submenu" onClick={() => setWorkOpen(!workOpen)}>WORK <span aria-hidden="true">⌄</span></button>
+          <div className={workOpen ? 'nav-work is-open' : 'nav-work'} onPointerEnter={(event) => { if (event.pointerType === 'mouse' && window.matchMedia('(min-width: 761px)').matches) setWorkOpen(true) }} onPointerLeave={(event) => { if (event.pointerType === 'mouse' && window.matchMedia('(min-width: 761px)').matches) setWorkOpen(false) }} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setWorkOpen(false) }}>
+            <button type="button" aria-expanded={workOpen} aria-controls="work-submenu" onClick={() => setWorkOpen(!workOpen)}>WORK</button>
             <div className="work-submenu" id="work-submenu">
               {workCategories.map((item) => <Link key={item.slug} to={`/work/${item.slug}`} onClick={closeMenus}>{item.label}</Link>)}
             </div>
