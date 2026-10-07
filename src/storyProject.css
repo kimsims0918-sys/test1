@@ -1,0 +1,19 @@
+.story-detail{background:#fff;color:#373737}
+.story-detail-intro{min-height:410px;padding:118px 20px 90px;text-align:center}
+.story-detail-intro h1{margin:0 0 33px;font:600 15px/1.5 'DM Sans','Apple SD Gothic Neo',sans-serif}
+.story-detail-intro p,.story-detail-context p{margin:0;white-space:pre-line;word-break:keep-all;font:400 14px/1.85 'DM Sans','Apple SD Gothic Neo',sans-serif}
+.story-detail-art,.story-detail-gallery img{display:block;width:100%;height:auto;max-height:none;object-fit:initial}
+.story-detail-context{min-height:644px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:42px;padding:90px 20px;text-align:center}
+.story-detail-context p{max-width:1000px}
+.story-detail-gallery{display:grid;gap:25px}
+.story-detail-navigation{display:flex;justify-content:center;padding:95px 20px 110px}
+.story-detail-navigation a{border:1px solid #b6b6b6;border-radius:20px;padding:9px 27px;font-size:11px;letter-spacing:.06em}
+.story-detail-navigation a:hover{background:#f1f1ef}
+@media(max-width:760px){
+  .story-detail-intro{min-height:0;padding:75px 24px 90px}
+  .story-detail-intro h1{margin-bottom:28px}
+  .story-detail-intro p,.story-detail-context p{font-size:13px;line-height:1.9}
+  .story-detail-context{min-height:0;padding:80px 24px 100px;gap:35px}
+  .story-detail-gallery{gap:14px}
+  .story-detail-navigation{padding:75px 20px 90px}
+}

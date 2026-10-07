@@ -10,6 +10,9 @@ export interface Project {
   year: string
   description: string
   additionalImages: string[]
+  storyIntro?: string
+  storyKorean?: string
+  storyEnglish?: string
   order: number
 }
 

@@ -43,7 +43,7 @@ vercel.json               # Vercel 새로고침 라우팅
 - 상단 로고(`headerLogo`), 대표 이미지, 작가 소개 이미지, 소개글, SNS/이메일: `src/content/site.json`에서 수정합니다. 웹용 로고는 `public/images/revinci-studio-logo.webp`에 있습니다. 이메일 주소는 한 곳만 바꾸면 Footer의 Email 링크에도 반영됩니다. Behance는 프로필 주소가 확인되지 않아 작품 페이지로 연결했습니다.
 - 새 이미지는 `public/images/`에 넣고 `/images/파일명`으로 경로를 지정합니다.
 
-현재 작품 이미지와 제목은 제공된 기존 REVINCI Studio 사이트 압축파일을 바탕으로 넣었습니다. 해당 사이트에 연도가 없는 작업은 `—`로 표시했습니다. 추가 이미지는 자료에 별도 이미지가 확인되지 않아 비워 두었고, 나중에 쉽게 추가할 수 있습니다. `public/images/`에 새 파일을 넣고 데이터의 경로를 수정하면 교체됩니다.
+현재 작품 이미지와 제목은 제공된 기존 REVINCI Studio 사이트 자료를 바탕으로 넣었습니다. 해당 사이트에 연도가 없는 작업은 `—`로 표시했습니다. `풍요를 지키는 고양이`는 기존 사이트의 전체 그림과 확대 이미지 세 장, 한·영 설명을 `src/content/projects/abundance-cats.json`에 연결했습니다. 이 프로젝트의 `storyIntro`, `storyKorean`, `storyEnglish`를 수정하면 상세 페이지 문구를 바꿀 수 있습니다. 새 이미지는 `public/images/`에 넣고 JSON의 이미지 경로를 수정하세요.
 
 ## 브라우저에서 콘텐츠 수정하기
 

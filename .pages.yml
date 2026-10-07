@@ -108,3 +108,12 @@ content:
         options:
           multiple:
             max: 20
+      - name: storyIntro
+        label: 작품 이야기 첫 부분 (선택, 줄바꿈 유지)
+        type: text
+      - name: storyKorean
+        label: 작품 이야기 두 번째 부분 — 한국어 (선택)
+        type: text
+      - name: storyEnglish
+        label: 작품 이야기 두 번째 부분 — 영어 (선택)
+        type: text

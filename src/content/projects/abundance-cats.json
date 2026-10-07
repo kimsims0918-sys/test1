@@ -3,9 +3,16 @@
   "id": "abundance-cats",
   "title": "풍요를 지키는 고양이",
   "category": "ILLUSTRATION",
-  "image": "/images/projects/abundance-cats.png",
+  "image": "/images/projects/abundance-cats-full.jpg",
   "cardImage": "/images/projects/abundance-cats-card.png",
   "year": "—",
-  "description": "Protecting Cats of Abundance. 한국화의 장식적인 선과 색으로 풍요를 지키는 고양이를 그린 작품입니다.",
-  "additionalImages": []
+  "description": "전통 속 상징들을 현대적으로 풀어내어, 풍요로운 울타리 안에서 서로를 지키는 고양이들의 이야기를 담았습니다.",
+  "storyIntro": "오래전부터 고양이는 재물과 집을 지키는 수호자로 여겨졌습니다.\n곡식을 갉아먹는 쥐를 잡아 재산을 보호했고,\n민화 속에서도 집안의 부귀영화를 상징하는 존재로 등장하곤 했지요.\n작업 속 두 마리 고양이는 귀한 도자기 그릇 속에 나란히 앉아,\n소중한 것을 품에 안고 지키는 모습을 하고 있습니다.",
+  "storyKorean": "주변의 복숭아나무는 장수와 행복, 번영을 뜻하며,\n날아드는 나비는 행운과 좋은 인연을 상징합니다.\n전통 속 상징들을 현대적으로 풀어내어,\n풍요로운 울타리 안에서 서로를 지키는 고양이들의 이야기를 담았습니다.",
+  "storyEnglish": "Cats have long been regarded as protectors of wealth and the household.\nThey caught mice that gnawed at stored grain, safeguarding property,\nand often appeared in folk paintings as symbols\nof prosperity and good fortune for the family.\nIn this work, two cats sit side by side inside a precious porcelain bowl,\nguarding what they hold dear.\nThe surrounding peach tree represents longevity, happiness, and prosperity,\nwhile the fluttering butterflies symbolize luck and meaningful encounters.\nBy reinterpreting these traditional symbols in a modern way,\nthe piece conveys a story of cats protecting one another\nwithin a sanctuary of abundance.",
+  "additionalImages": [
+    "/images/projects/abundance-cats.png",
+    "/images/projects/abundance-cats-detail-2.webp",
+    "/images/projects/abundance-cats-detail-3.webp"
+  ]
 }
