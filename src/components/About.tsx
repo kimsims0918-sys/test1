@@ -6,12 +6,15 @@ export function About() {
     <section className="about section-space page-shell" id="about" aria-labelledby="about-title">
       <div className="about-intro">
         <h1 id="about-title">ABOUT</h1>
-        <img className="about-monogram" src={site.aboutImage} alt="르빈치 스튜디오 모노그램" />
       </div>
       <div className="about-copy">
-        <h2>{site.aboutHeading}</h2>
         <div className="about-text">
-          {site.about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          <div className="about-language-block" lang="en">
+            {site.aboutEnglish.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          </div>
+          <div className="about-language-block" lang="ko">
+            {site.about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          </div>
         </div>
         <Link className="text-link" to="/contact">START A PROJECT <span aria-hidden="true">↗</span></Link>
       </div>

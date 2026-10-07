@@ -4,6 +4,7 @@ import content from '../content/site.json'
 export const site = {
   ...content,
   about: content.about ?? [],
+  aboutEnglish: content.aboutEnglish ?? [],
   socialLinks: [
     ...(content.socialLinks ?? []),
     { label: 'Email', url: `mailto:${content.contactEmail}` },
