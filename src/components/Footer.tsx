@@ -1,17 +1,9 @@
-import { Link } from 'react-router-dom'
 import { site } from '../data/site'
 
 export function Footer() {
   return (
     <footer className="footer">
       <div className="page-shell">
-        <div className="footer-top">
-          <Link className="footer-logo" to="/">
-            {site.name}<span>.</span>
-          </Link>
-          <p>{site.discipline}</p>
-        </div>
-
         <div className="footer-bottom">
           <span>Copyright © {site.name}</span>
           <nav className="footer-links" aria-label="소셜 링크">
