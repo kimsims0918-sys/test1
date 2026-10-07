@@ -1,4 +1,4 @@
-.story-detail{background:#fff;color:#373737}
+.story-detail{background:#f6f5f1;color:#373737}
 .story-detail-intro{min-height:410px;padding:118px 20px 90px;text-align:center}
 .story-detail-intro h1{margin:0 0 33px;font:600 15px/1.5 'DM Sans','Apple SD Gothic Neo',sans-serif}
 .story-detail--subtitled .story-detail-intro h1{margin-bottom:8px}
@@ -7,13 +7,13 @@
 .story-detail--bilingual .story-detail-intro{min-height:505px;padding-top:85px;padding-bottom:85px}
 .story-detail--bilingual .story-detail-context{min-height:362px;padding-block:80px;gap:35px}
 .story-detail-intro .story-detail-intro-english{margin-top:55px}
-.story-detail--bilingual .story-detail-art,.story-detail--bilingual .story-detail-gallery{width:calc(100% - 30px);margin-inline:auto}
+.story-detail-art,.story-detail-gallery{width:min(calc(100% - 120px),1100px);margin-inline:auto}
 .story-detail-caption{margin:28px 20px 0;text-align:center;font-size:14px}
 .story-detail-intro p,.story-detail-context p{margin:0;white-space:pre-line;word-break:keep-all;font:400 14px/1.85 'DM Sans','Apple SD Gothic Neo',sans-serif}
-.story-detail-art,.story-detail-gallery img{display:block;width:100%;height:auto;max-height:none;object-fit:initial}
+.story-detail-art,.story-detail-gallery img{display:block;height:auto;max-height:none;object-fit:initial}
 .story-detail-context{min-height:644px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:42px;padding:90px 20px;text-align:center}
 .story-detail-context p{max-width:1000px}
-.story-detail-gallery{display:grid;gap:25px}
+.story-detail-gallery{display:grid;gap:40px}.story-detail-gallery img{width:100%}
 .story-detail-navigation{display:flex;justify-content:center;padding:95px 20px 110px}
 .story-detail-navigation a{border:1px solid #b6b6b6;border-radius:20px;padding:9px 27px;font-size:11px;letter-spacing:.06em}
 .story-detail-navigation a:hover{background:#f1f1ef}
@@ -25,6 +25,7 @@
   .story-detail--subtitled .story-detail-context{min-height:0}
   .story-detail--bilingual .story-detail-intro{min-height:0;padding:75px 24px 85px}
   .story-detail--bilingual .story-detail-context{min-height:0}
-  .story-detail-gallery{gap:14px}
+  .story-detail-art,.story-detail-gallery{width:calc(100% - 40px)}
+  .story-detail-gallery{gap:24px}
   .story-detail-navigation{padding:75px 20px 90px}
 }
