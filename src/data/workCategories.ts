@@ -34,7 +34,13 @@ export const workCategories: WorkCategory[] = [
       english: ['Vector graphics and design assets crafted for use across different media.'],
     },
   },
-  { slug: 'brand-projects', label: 'Brand Projects', category: 'BRAND PROJECTS', description: 'Visual identities, logos and packaging for brands.' },
+  { slug: 'brand-projects', label: 'Brand Projects', category: 'BRAND PROJECTS', description: 'Visual identities, logos and packaging for brands.',
+    intro: {
+      title: 'Revinci Brand Projects',
+      korean: ['브랜드의 성격을 일관된 시각 언어로 표현합니다.', '로고와 패키지, 브랜드 그래픽에 클래식한 감성과 섬세한 디테일을 담습니다.'],
+      english: ['Expressing the character of a brand through a consistent visual language.', 'Classic sensibility and thoughtful details, crafted into logos, packaging, and brand graphics.'],
+    },
+  },
 ]
 
 export function belongsToCategory(project: Project, category: Category) {
