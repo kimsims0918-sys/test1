@@ -3,9 +3,13 @@
   "id": "inside-out-2",
   "title": "Inside Out 2 — Korean Folk Painting",
   "category": "ILLUSTRATION",
-  "image": "/images/projects/inside-out-2.jpg",
+  "image": "/images/projects/inside-out-2-full.webp",
   "cardImage": "/images/projects/inside-out-2-card.jpg",
   "year": "2024",
-  "description": "Inside Out 2 Korean Modern Folk Painting. 캐릭터와 감정의 이야기를 현대적인 민화 스타일로 표현한 일러스트레이션입니다.",
-  "additionalImages": []
+  "description": "김홍도의 「서당」을 바탕으로 인사이드 아웃의 감정과 캐릭터를 재해석한 공식 일러스트레이션입니다.",
+  "additionalImages": [],
+  "storyTitle": "인사이드 아웃 2 — 한국 현대 민화 일러스트레이션",
+  "storySubtitle": "Inside Out 2 Korean Modern Folk Painting Illustration",
+  "storyIntro": "김홍도의 전통 풍속화 「서당」에서 영감을 받아,\n픽사의 인사이드 아웃 속 감정들을 재해석한 공식 일러스트레이션입니다.\n김홍도의 「서당」은 조선 시대 마을 서당의 교육 현장을 생생하게 담은 대표적인 풍속화입니다.\n훈장에게 꾸중을 듣는 어린 학생들의 모습을 인사이드 아웃 캐릭터 각각의 개성을 통해 창의적으로 표현했습니다.",
+  "storyIntroEnglish": "We created an official illustration inspired by Kim Hong-do’s traditional Korean folk painting \"Seodang\",\nreinterpreting the emotions of Pixar’s Inside Out.\nThe original \"Seodang\" by Kim Hong-do is a representative folk painting from the Joseon Dynasty\nthat vividly depicts the educational setting of a traditional village school.\nIn this work, the scene of young students being scolded by their teacher is creatively expressed\nthrough the unique personalities of each Inside Out character."
 }
