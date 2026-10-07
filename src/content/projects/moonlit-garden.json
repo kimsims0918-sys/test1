@@ -3,9 +3,18 @@
   "id": "moonlit-garden",
   "title": "달빛이 머무는 정원",
   "category": "ILLUSTRATION",
-  "image": "/images/projects/moonlit-garden.png",
+  "image": "/images/projects/moonlit-garden-full.webp",
   "cardImage": "/images/projects/moonlit-garden-card.png",
   "year": "—",
-  "description": "The Moonlit Garden. 달빛이 비추는 정원을 흑백 드로잉으로 담아낸 작품입니다.",
-  "additionalImages": []
+  "description": "한옥의 창과 정원에서 영감을 받아 흑백의 선과 여백으로 고요한 밤의 시간과 기억을 담아낸 작품입니다.",
+  "additionalImages": [
+    "/images/projects/moonlit-garden-detail-1.webp",
+    "/images/projects/moonlit-garden-detail-2.webp",
+    "/images/projects/moonlit-garden-detail-3.webp",
+    "/images/projects/moonlit-garden-detail-4.webp"
+  ],
+  "storySubtitle": "Silent Garden Under the Moon",
+  "storyIntro": "깊고 고요한 밤, 한옥과 정원 위에 내려앉은 달빛 아래에서 시간은 조용히 숨을 쉽니다.\n흑백의 선만으로 섬세하게 엮어낸 세계, 르빈치 아틀리에의 첫 번째 기록입니다.\n한국 전통 가옥의 창과 정원에서 영감을 받아 자연과 건축이 조화롭게 만나는 고요한 순간을 담았습니다.\n의도적으로 색을 더하지 않고, 선의 리듬과 여백만으로 시간의 흐름과 장면의 깊이를 만들어냈습니다.\n어둠 속에 머무는 창은 밤의 정적과 달빛의 은은한 온기를 함께 품고 있습니다.\n흑백 선의 조용한 흐름을 통해 깊은 밤에 남아 있는 희미한 숨결과 고요한 기억을 되찾습니다.",
+  "storyIntroEnglish": "On a deep and tranquil night,\nbeneath the moonlight that rests upon a hanok and its garden,\ntime itself breathes in silence.\n\nThis is the first chronicle of Revinci Atelier,\na world delicately woven only with black and white lines.\n\nInspired by the windows and gardens of traditional Korean houses,\nthis piece captures a serene moment where nature and architecture harmoniously converge.\n\nNo colors were added intentionally—\nonly the rhythm of lines and the embrace of empty space shape the flow of time and depth of the scene.\n\nThe windows remain in darkness,\nholding within them both the stillness of the night and the subtle warmth of the moonlight.\n\nThrough the quiet flow of black and white lines,\nI retrieve faint breaths and silent memories from the depth of the night.",
+  "galleryCaption": "© Revinci Atelier. This work and its narrative are original creations. Reproduction, distribution, or any unauthorized use is strictly prohibited."
 }
