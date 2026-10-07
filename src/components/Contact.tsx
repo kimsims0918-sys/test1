@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import { site } from '../data/site'
 import { submitInquiry, type Inquiry } from '../services/inquiry'
 
 const projectTypes = ['Illustration', 'Brand Illustration', 'Vector & Asset', 'Package / Visual', 'Other']
@@ -23,10 +24,16 @@ export function Contact() {
   }
 
   return (
-    <section className="contact section-space" id="contact" aria-labelledby="contact-title">
+    <section className="contact contact-editorial" id="contact" aria-labelledby="contact-title">
       <div className="page-shell">
-        <span className="section-kicker">04 / CONTACT</span>
-        <div className="contact-heading"><h1 id="contact-title">LET'S WORK<br />TOGETHER<span className="heading-period">.</span></h1><p>새로운 프로젝트와 협업을 기다리고 있습니다.<br />일러스트레이션, 브랜드 비주얼, 패키지 및 그래픽 에셋 제작에 대한 문의를 보내주세요.</p></div>
+        <div className="contact-editorial-layout">
+          <div className="contact-editorial-intro">
+            <h1 id="contact-title">CONTACT</h1>
+            <p className="contact-editorial-lead">클래식한 감성으로 새로운 이야기를 함께 만듭니다.</p>
+            <p>일러스트레이션, 벡터 그래픽, 브랜드 디자인에 대한 문의를 기다립니다. 프로젝트의 내용과 희망 일정을 알려주시면 작업 범위와 진행 가능 여부를 안내드립니다.</p>
+            <div className="contact-editorial-email"><span>Email</span><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></div>
+          </div>
+          <div className="contact-editorial-form">
         {submitted ? <div className="contact-success" role="status"><span>↗</span><h3>Thank you. Your inquiry has been received.</h3><p>이 화면은 MVP용 접수 확인입니다. 현재 입력 내용은 전송되거나 저장되지 않습니다.</p><button type="button" className="text-link" onClick={() => setSubmitted(false)}>SEND ANOTHER INQUIRY <span aria-hidden="true">↗</span></button></div> :
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-grid">
@@ -40,6 +47,8 @@ export function Contact() {
             </div>
             <div className="form-bottom"><p><span>*</span> Required fields<br />MVP 단계에서는 문의 내용이 서버로 전송되지 않습니다.</p><button className="submit-button" disabled={busy} type="submit">{busy ? 'SENDING...' : 'SEND INQUIRY'} <span aria-hidden="true">↗</span></button></div>
           </form>}
+          </div>
+        </div>
       </div>
     </section>
   )
