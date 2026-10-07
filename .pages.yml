@@ -76,6 +76,9 @@ content:
         label: 작품 제목
         type: string
         required: true
+      - name: galleryEnglishTitle
+        label: 갤러리 영문명 (선택)
+        type: string
       - name: category
         label: 카테고리
         type: select

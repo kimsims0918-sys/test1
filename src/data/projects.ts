@@ -3,6 +3,7 @@ export type Category = 'ILLUSTRATION' | 'VECTOR & ASSETS' | 'BRAND PROJECTS'
 export interface Project {
   id: string
   title: string
+  galleryEnglishTitle?: string
   category: Category
   alsoIn?: Category
   image: string
