@@ -111,6 +111,9 @@ content:
       - name: storyIntro
         label: 작품 이야기 첫 부분 (선택, 줄바꿈 유지)
         type: text
+      - name: storySubtitle
+        label: 작품 이야기 영문 부제 (선택)
+        type: string
       - name: storyKorean
         label: 작품 이야기 두 번째 부분 — 한국어 (선택)
         type: text

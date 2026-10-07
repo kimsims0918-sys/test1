@@ -3,9 +3,18 @@
   "id": "hwabyeongdo",
   "title": "화병도(花甁圖)",
   "category": "ILLUSTRATION",
-  "image": "/images/projects/hwabyeongdo.png",
+  "image": "/images/projects/hwabyeongdo-full.webp",
   "cardImage": "/images/projects/hwabyeongdo-card.png",
   "year": "—",
   "description": "Hwabyeongdo / Traditional Korean Flower Vase Painting. 화병과 꽃을 전통 회화의 감각으로 재해석한 작품입니다.",
-  "additionalImages": []
+  "additionalImages": [
+    "/images/projects/hwabyeongdo-detail-1.jpg",
+    "/images/projects/hwabyeongdo-detail-2.jpg",
+    "/images/projects/hwabyeongdo-detail-3.jpg",
+    "/images/projects/hwabyeongdo-detail-4.jpg"
+  ],
+  "storySubtitle": "Traditional Korean Flower Vase Painting",
+  "storyIntro": "전통 한국 민화의 대표적인 소재인 \"화병도\"를 재해석한 일러스트입니다.\n화병도에는 화려한 꽃들과 감이 한 폭의 그림 안에 채워넣었습니다.\n한국의 옛 선조들은 화병도를 복(福), 장수(壽), 번영(榮)을 기원하며 그렸던 그림입니다.",
+  "storyKorean": "이번 작품에서는 한국의 전통적인 민화의 상징성을 유지하면서,\n저만의 작업 스타일인 섬세한 선들로 재구성하였습니다.\n검은 배경 위에 꽃들은 어둠 속에서 꺾이지 않는\n강인한 생명력과 희망을 상징합니다.\n화병과 다양한 자연물들은 한국적 아름다움을 표현하였습니다.\n\n\"과거와 현재가 만나는 지점에서 한국 고유의 아름다움을 느낄 수 있기를\"",
+  "storyEnglish": "This illustration is a reinterpretation of \"Hwabyeongdo\"\n(Painting of a Flower Vase), one of the most iconic themes in traditional Korean Minhwa(folk art).\nThe vase is filled with vibrant flowers and persimmons, all harmoniously arranged within a single frame.\nIn the past, Korean ancestors painted Hwabyeongdo to wish for blessings, longevity, and prosperity.\n\nIn this work, I have preserved the symbolic essence of traditional Korean Minhwa,\nwhile reconstructing it with my own delicate linework style.\nThe flowers blooming against a dark background symbolize resilient life\nand hope that never withers, even in darkness.\nThe vase and various natural elements express the unique beauty of Korea.\n\n\"I hope you can feel the unique beauty of Korea at the intersection where the past and present meet.\""
 }

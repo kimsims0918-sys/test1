@@ -11,6 +11,7 @@ export interface Project {
   description: string
   additionalImages: string[]
   storyIntro?: string
+  storySubtitle?: string
   storyKorean?: string
   storyEnglish?: string
   order: number
