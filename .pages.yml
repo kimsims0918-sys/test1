@@ -114,6 +114,15 @@ content:
       - name: storySubtitle
         label: 작품 이야기 영문 부제 (선택)
         type: string
+      - name: storyTitle
+        label: 작품 이야기 제목 (선택, 목록 제목과 다를 때)
+        type: string
+      - name: storyIntroEnglish
+        label: 작품 이야기 첫 부분 — 영어 (선택)
+        type: text
+      - name: galleryCaption
+        label: 마지막 이미지 설명 (선택)
+        type: string
       - name: storyKorean
         label: 작품 이야기 두 번째 부분 — 한국어 (선택)
         type: text

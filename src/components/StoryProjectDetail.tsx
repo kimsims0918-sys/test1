@@ -8,11 +8,12 @@ export function StoryProjectDetail({ project }: { project: Project }) {
   const backTo = category ? `/work/${category.slug}` : '/work'
 
   return (
-    <main className={`story-detail${project.storySubtitle ? ' story-detail--subtitled' : ''}`}>
+    <main className={`story-detail${project.storySubtitle ? ' story-detail--subtitled' : ''}${project.storyIntroEnglish ? ' story-detail--bilingual' : ''}`}>
       <section className="story-detail-intro" aria-labelledby="story-title">
-        <h1 id="story-title">{project.title}</h1>
+        <h1 id="story-title">{project.storyTitle ?? project.title}</h1>
         {project.storySubtitle && <div className="story-detail-subtitle" lang="en">{project.storySubtitle}</div>}
         <p lang="ko">{project.storyIntro}</p>
+        {project.storyIntroEnglish && <p className="story-detail-intro-english" lang="en">{project.storyIntroEnglish}</p>}
       </section>
 
       <img className="story-detail-art" src={project.image} alt={`${project.title} 전체 작품 이미지`} />
@@ -32,6 +33,7 @@ export function StoryProjectDetail({ project }: { project: Project }) {
         </div>
       )}
 
+      {project.galleryCaption && <p className="story-detail-caption">{project.galleryCaption}</p>}
       <div className="story-detail-navigation">
         <Link to={backTo}>← {category?.label ?? 'ALL WORK'}</Link>
       </div>

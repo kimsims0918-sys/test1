@@ -3,9 +3,22 @@
   "id": "venom-last-dance",
   "title": "베놈: 라스트 댄스",
   "category": "ILLUSTRATION",
-  "image": "/images/projects/venom-last-dance.jpg",
+  "image": "/images/projects/venom-last-dance-full.jpg",
   "cardImage": "/images/projects/venom-last-dance-card.jpg",
   "year": "—",
   "description": "Venom: Last Dance Illustration in Korean Traditional Art Style. 영화의 이미지를 한국화 스타일로 풀어낸 일러스트레이션입니다.",
-  "additionalImages": []
+  "additionalImages": [
+    "/images/projects/venom-last-dance-detail-1.webp",
+    "/images/projects/venom-last-dance-detail-2.webp",
+    "/images/projects/venom-last-dance-detail-3.webp",
+    "/images/projects/venom-last-dance-detail-4.webp",
+    "/images/projects/venom-last-dance-detail-5.webp"
+  ],
+  "storyTitle": "베놈 : 라스트댄스 한국화 스타일 일러스트레이션",
+  "storySubtitle": "Venom: Last Dance Illustration in Korean Traditional Art Style",
+  "storyIntro": "\"베놈 라스트댄스 한국화 스타일 일러스트레이션\"은 기존 베놈의 어두운 분위기와\n긴장감있는 분위기를 동양 미학으로 자연스럽게 풀어내는 것에 초점을 두었습니다.\n베놈 특유의 괴기스러운 모습과 한국적인 문양, 그리고 의상으로\n담백하게 표현한 것이 특징입니다.",
+  "storyIntroEnglish": "The \"Venom: The Last Dance Korean Traditional Painting Style Illustration\" focuses on reinterpreting Venom’s dark and\nintense atmosphere through the lens of Eastern aesthetics.\nIt features Venom’s signature grotesque form blended naturally with Korean patterns and traditional clothing,\nexpressed in a subtle and understated style.",
+  "storyKorean": "각 오브젝트에는 베놈 : 라스트댄스에 특징적으로 등장하는 다양한 요소들을 삽입하였습니다.\n베놈의 머리 모자 장식에는 베놈화된 말을 넣었으며,\n배경은 그랜드캐니언을 민화스타일로 재해석하였습니다.",
+  "storyEnglish": "Each object contains various symbolic elements that appear in Venom: The Last Dance.\nThe headpiece of Venom features a Venomized horse, and\nthe background reinterprets the Grand Canyon in a traditional Korean folk painting (Minhwa) style.",
+  "galleryCaption": "배우 톰 하디(Tom Hardy)"
 }
