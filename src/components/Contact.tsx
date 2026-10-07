@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import { Link } from 'react-router-dom'
 import { site } from '../data/site'
 import { submitInquiry, type Inquiry } from '../services/inquiry'
 
@@ -47,6 +48,7 @@ export function Contact() {
               <label>Schedule<input name="schedule" value={values.schedule} onChange={(e) => update('schedule', e.target.value)} placeholder="Expected timeline" /></label>
               <label className="field-wide"><span className="field-label">Project Details <em>*</em></span><textarea name="details" required minLength={10} rows={4} value={values.details} onChange={(e) => update('details', e.target.value)} placeholder="Tell me about your project, goals, and deliverables." /></label>
             </div>
+            <label className="privacy-consent"><input type="checkbox" required name="privacyConsent" /><span><Link to="/privacy" target="_blank">개인정보 수집·이용 안내</Link>를 확인했으며 문의 정보가 FormSubmit을 통해 이메일로 전달되는 것에 동의합니다. (필수)</span></label>
             <p className="contact-form-error" role="alert">{error}</p><div className="form-bottom"><p><span>*</span> Required fields<br />문의 내용은 FormSubmit을 통해 이메일로 전달됩니다.</p><button className="submit-button" disabled={busy} type="submit">{busy ? 'SENDING...' : 'SEND INQUIRY'} <span aria-hidden="true">↗</span></button></div>
           </form>}
           </div>
