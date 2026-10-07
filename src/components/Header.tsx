@@ -29,7 +29,7 @@ export function Header() {
         <nav className={open ? 'site-nav is-open' : 'site-nav'} id="site-navigation" aria-label="주 메뉴">
           <button type="button" onClick={() => goTo('about')}>ABOUT</button>
           <div className={workOpen ? 'nav-work is-open' : 'nav-work'} onPointerEnter={(event) => { if (event.pointerType === 'mouse' && window.matchMedia('(min-width: 761px)').matches) setWorkOpen(true) }} onPointerLeave={(event) => { if (event.pointerType === 'mouse' && window.matchMedia('(min-width: 761px)').matches) setWorkOpen(false) }} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setWorkOpen(false) }}>
-            <button type="button" aria-expanded={workOpen} aria-controls="work-submenu" onClick={() => setWorkOpen(!workOpen)}>WORK</button>
+            <button type="button" aria-expanded={workOpen} aria-controls="work-submenu" onFocus={() => setWorkOpen(true)} onClick={() => { closeMenus(); if (location.pathname === '/work/illustration') window.scrollTo({ top: 0, behavior: 'smooth' }); else navigate('/work/illustration') }}>WORK</button>
             <div className="work-submenu" id="work-submenu">
               {workCategories.map((item) => <Link key={item.slug} to={`/work/${item.slug}`} onClick={closeMenus}>{item.label}</Link>)}
             </div>
