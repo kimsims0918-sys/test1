@@ -1,15 +1,29 @@
-const services = [
-  { number: '01', title: 'ILLUSTRATION', description: '이미지로 이야기와 분위기를 만드는 일러스트레이션' },
-  { number: '02', title: 'BRAND ILLUSTRATION', description: '브랜드의 성격을 이미지 언어로 확장하는 비주얼 작업' },
-  { number: '03', title: 'VECTOR & ASSET', description: '다양한 매체에 활용할 수 있도록 설계된 벡터 그래픽과 디자인 에셋' },
-]
+import { Link } from 'react-router-dom'
+import { servicesContent } from '../data/services'
 
 export function Services() {
   return (
-    <section className="services section-space" id="services" aria-labelledby="services-title">
-      <div className="page-shell">
-        <div className="section-heading services-heading"><div><span className="section-kicker">02 / PRACTICE</span><h1 id="services-title">What I Do<span className="heading-period">.</span></h1></div><p>From first thought to final form.</p></div>
-        <div className="service-list">{services.map((service) => <div className="service-row" key={service.number}><span>{service.number}</span><h3>{service.title}</h3><p>{service.description}</p><span className="service-mark" aria-hidden="true">↗</span></div>)}</div>
+    <section className="services-editorial page-shell" id="services" aria-labelledby="services-title">
+      <div className="services-editorial-heading">
+        <h1 id="services-title">SERVICES</h1>
+        <p>{servicesContent.introduction}</p>
+      </div>
+      <div className="services-editorial-list">
+        {servicesContent.services.map((service) => (
+          <article className="services-editorial-row" key={service.number}>
+            <span className="services-editorial-number">{service.number}</span>
+            <h2>{service.title}</h2>
+            <div className="services-editorial-copy">
+              <p>{service.description}</p>
+              <p className="services-editorial-scope">{service.scope}</p>
+              <Link to={service.path}>관련 작품 보기 ↗</Link>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div className="services-editorial-contact">
+        <p>{servicesContent.estimate}</p>
+        <Link to="/contact">프로젝트 문의하기 ↗</Link>
       </div>
     </section>
   )
