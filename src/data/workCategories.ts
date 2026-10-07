@@ -27,7 +27,13 @@ export const workCategories: WorkCategory[] = [
       ],
     },
   },
-  { slug: 'vector-assets', label: 'Vector & Assets', category: 'VECTOR & ASSETS', description: 'Graphic assets shaped for use across different media.' },
+  { slug: 'vector-assets', label: 'Vector & Assets', category: 'VECTOR & ASSETS', description: 'Graphic assets shaped for use across different media.',
+    intro: {
+      title: 'Revinci Vector & Assets',
+      korean: ['다양한 매체에 활용할 수 있도록 설계된 벡터 그래픽과 디자인 에셋입니다.'],
+      english: ['Vector graphics and design assets crafted for use across different media.'],
+    },
+  },
   { slug: 'brand-projects', label: 'Brand Projects', category: 'BRAND PROJECTS', description: 'Visual identities, logos and packaging for brands.' },
 ]
 

@@ -34,7 +34,7 @@ export function WorkCategory() {
       {!current.intro && <nav className="filter-row" aria-label="작품 분류">
         {workCategories.map((item) => <Link key={item.slug} className={item.slug === slug ? 'filter is-active' : 'filter'} to={`/work/${item.slug}`} aria-current={item.slug === slug ? 'page' : undefined}>{item.label}</Link>)}
       </nav>}
-      {visible.length > 0 ? <div className="project-grid">{visible.map((project, index) => <PortfolioCard key={project.id} project={project} index={index} overlay={current.category === 'ILLUSTRATION'} />)}</div> : <div className="portfolio-empty"><p>이 분야의 작품은 준비 중입니다.</p><Link to="/work">전체 작품 보기 ↗</Link></div>}
+      {visible.length > 0 ? <div className="project-grid">{visible.map((project, index) => <PortfolioCard key={project.id} project={project} index={index} overlay={Boolean(current.intro)} />)}</div> : <div className="portfolio-empty"><p>이 분야의 작품은 준비 중입니다.</p><Link to="/work">전체 작품 보기 ↗</Link></div>}
       <Link className="work-page-back" to="/work">← ALL WORK</Link>
     </main>
   )
