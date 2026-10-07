@@ -33,7 +33,9 @@ export function Hero() {
           <h1 id="hero-title"><img className="hero-stage-logo" src={site.headerLogo} alt="Revinci Studio" /></h1>
           <span className="hero-stage-overline">{site.discipline}</span>
         </div>
-        <div className="hero-stage-bottom" aria-hidden="true" />
+        <div className="hero-stage-description">
+          {site.heroDescription.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+        </div>
       </div>
     </section>
   )

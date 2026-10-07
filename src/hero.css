@@ -28,9 +28,11 @@
 .hero-stage-inner{position:relative;z-index:1;display:flex;flex-direction:column;min-height:calc(100svh - 76px);padding-top:34px;padding-bottom:30px}
 .hero-stage-copy{margin-top:auto;margin-bottom:24px;text-align:center;pointer-events:none}
 .hero-stage-overline{position:relative;display:block;margin-top:-6%;font-family:Georgia,'Times New Roman',serif;font-size:30px;font-weight:400;line-height:1.25;letter-spacing:.01em;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.7)}
+.hero-stage-description{width:min(100%,780px);margin:0 auto 8px;text-align:center;font:400 14px/1.45 'American Typewriter','Courier New',monospace;letter-spacing:.08em;color:#f8f7f3;text-shadow:0 1px 8px rgba(0,0,0,.55)}
+.hero-stage-description p{margin:0}
+.hero-stage-description p+p{margin-top:12px}
 .hero-stage h1{margin:0}
 .hero-stage-logo{display:block;width:100%;height:auto;filter:none}
-.hero-stage-bottom{height:65px}
 .filter-row a.filter{display:inline-block}
 .work-page{min-height:70svh;padding-top:95px;padding-bottom:130px}
 .work-page-heading{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:58px}
@@ -66,10 +68,11 @@
   .hero-feature-art img{object-position:center;transform:scale(1.2);filter:blur(2px) brightness(.7)}
   .hero-feature-art .hero-feature-color{mask-image:radial-gradient(circle 42vw at var(--reveal-x,50%) var(--reveal-y,50%),#000 25%,rgba(0,0,0,.9) 58%,transparent 100%);-webkit-mask-image:radial-gradient(circle 42vw at var(--reveal-x,50%) var(--reveal-y,50%),#000 25%,rgba(0,0,0,.9) 58%,transparent 100%)}
   .hero-feature-art::after{background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.48) 42%,rgba(0,0,0,.83) 100%)}
-  .hero-stage-copy{margin-bottom:28px}
+  .hero-stage-copy{margin-bottom:18px}
   .hero-stage-overline{margin-top:-7%;font-size:18px}
+  .hero-stage-description{font-size:11.5px;line-height:1.45;letter-spacing:.04em;margin-bottom:5px}
+  .hero-stage-description p+p{margin-top:10px}
   .hero-stage-logo{width:110%;max-width:none;margin-left:-5%}
-  .hero-stage-bottom{height:50px}
 }
 @media(prefers-reduced-motion:reduce){
   .hero-feature-color{transition:none}

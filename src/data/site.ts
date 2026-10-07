@@ -5,6 +5,7 @@ export const site = {
   ...content,
   about: content.about ?? [],
   aboutEnglish: content.aboutEnglish ?? [],
+  heroDescription: content.heroDescription ?? [],
   socialLinks: [
     ...(content.socialLinks ?? []),
     { label: 'Email', url: `mailto:${content.contactEmail}` },
