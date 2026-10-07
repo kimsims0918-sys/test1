@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { site } from '../data/site'
 
 export function About() {
@@ -16,7 +15,6 @@ export function About() {
             {site.about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
         </div>
-        <Link className="text-link" to="/contact">START A PROJECT <span aria-hidden="true">↗</span></Link>
       </div>
     </section>
   )
